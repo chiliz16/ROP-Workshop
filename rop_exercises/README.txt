@@ -1,6 +1,15 @@
 #### WELCOME  ####
 
 Congratulations, you successfully started the ROP Machine. 
+-----------------------------------------------------------------------
+IMPORTANT NOTE: for the first two exercises you have to disable ASLR.
+Disable ASLR until the next reboot:
+echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
+
+For the third exercise you have to enable ASLR again:
+echo 2 | sudo tee /proc/sys/kernel/randomize_va_space
+-----------------------------------------------------------------
+
 The next important thing is to make yourself comfortable.
 This may include:
 
@@ -13,6 +22,8 @@ This may include:
 - Start "Hopper Disassembler". Click "Try the Demo" when it starts. Navigate
   to "File -> Read Executable to Disassemble" and open any binary just to check
   if it is working (e.g. exercises/01_demo/01_demo_32_bit).
+
+
 
 -----------------------------------------------------------------------------------
 
