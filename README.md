@@ -1,5 +1,5 @@
 # ROP-Workshop
-slides, exercises, cheatsheet and instructions for my ROP-Workshop (Blackhoodie18)
+Slides, exercises, cheatsheet and instructions for my ROP-Workshop (Blackhoodie18)
 
 You can find the slides of the workshop in the directory slides, and the exercises we worked through in the folder exercises. 
 If you want to follow along, it's a good idea to set up this workshop VM:
@@ -15,33 +15,45 @@ Set Up Your Workhop VM
 - install pwntools:
   pwntools is a python-module we will use. 
   It is installed via pip. Before doing that, taking a snapshot is very wise. 
-
+```
 	$ sudo apt-get update
 	$ sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential
 	$ sudo pip install pwntools
-
+```
 
 -install ipython:
+```
 	$ sudo apt install ipython
+```
 => open a terminal, type in "ipython", you see the following prompt: 
+```
 	[1]:
+```
 => Try the following: 
+```
  	[1]: from pwn import * 
+```
   if no errors occure, both ipython and pwntools are installed correctly => snapshot!
 
 
 - install ROPgadget (another pip install, so make sure you did a snapshot)
+```
 	$ sudo pip install capstone
 	$ sudo pip install ropgadget
 	$ ROPgadget --version
+```
 
 
 - install gdb-peda:
+```
 	$ sudo apt install git
 	$ git clone https://github.com/longld/peda.git ~/peda
-	$ echo "source ~/peda/peda.py" >> ~/.gdbinit 
+	$ echo "source ~/peda/peda.py" >> ~/.gdbinit
+```
 => open gdb in your terminal, the prompt should look like this now: 
+```
 	gdb-peda$ 
+```
 
 
 - install the free Demo version of Hopper: https://www.hopperapp.com/download.html
