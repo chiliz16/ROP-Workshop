@@ -21,7 +21,7 @@ Set Up Your Workhop VM
 	$ sudo pip install pwntools
 ```
 
--install ipython:
+- install ipython:
 ```
 	$ sudo apt install ipython
 ```
