@@ -69,7 +69,9 @@ Set Up Your Workhop VM
 
 
 - install ropper:
+```
   $ sudo pip install ropper
+```
 
 - install gdb-peda:
 ```
