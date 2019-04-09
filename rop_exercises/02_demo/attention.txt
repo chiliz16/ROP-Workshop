@@ -1,0 +1,16 @@
+To keep the challenge interesting, I linked against the libc in this folder.
+
+! To execute this binary, copy this command:
+
+```
+LD_PRELOAD=./libc.so.6 ./ld-linux-x86-64.so.2 ./02_demo_64_bit
+```
+
+! For this challenge you need to use vmmap for the libc base address
+
+to run the program with gdb:
+
+> gdb ./ld-linux-x86-64.so.2
+> gdb-peda$ --library-path ./ ./02_demo_64_bit
+
+you can set breakpoints or break the program with ctrl+c like before.
