@@ -1,6 +1,5 @@
 #### WELCOME  ####
 
-Congratulations, you successfully started the ROP Machine. 
 -----------------------------------------------------------------------
 IMPORTANT NOTE: for the first two exercises you have to disable ASLR.
 Disable ASLR until the next reboot:
@@ -10,16 +9,13 @@ For the third exercise you have to enable ASLR again:
 echo 2 | sudo tee /proc/sys/kernel/randomize_va_space
 -----------------------------------------------------------------
 
-The next important thing is to make yourself comfortable.
-Start a terminal, navigate to exercises/
-Every exercise folder contains:
-- the vulnerable binary
-- source code for the vulnerable binary
-- a python template that gives a structure for the exploit
-
 Your task for every exercise is to start the vulnerable binary and give 
 it an exploit-payload which will give you a shell. For this you can use 
 the python-template that already contains the rough structure of the exploit. 
+
+There is a slidedeck that guides you through the workshop, with everything I've 
+said and done in the workshop, so you might want to walk this one through.
+(/slides/IntroToROP_with_notes.pdf). 
 
 Every important command (e.g. how to give the exploit to the vulnerable binary)
 is included in the cheat sheet. Also tips on how to debug/avoid mistakes are 
@@ -29,19 +25,19 @@ included, so read carefully, it may save you some time!
 you want to overwrite. Also, if you see a blinking cursor, you might have already
 a shell, as there will be no prompt. You can try 'whoami' to verify.)
 
-The slides together with the cheatsheet and the templates should provide you 
-with the information to solve the exercises. 
-slides:
-- exercise 1: p. 1-32
-- exercise 2: p. 33-53
-- exercise 3: p. 54-72
+
+structure:
+- exercise 1: 64 bit, ASLR disabled (guided)
+- exercise 2: 64 bit, ASLR disabled (on your own)
+- exercise 3: ASLR enabled (without PIE)
 
 
 For the third exercise it is useful to inspect how dynamic functions are called 
 with Hopper. Load the third binary in Hopper and follow the references 
 to the GOT and the PLT by clicking on them. 
 
-
+If you are interested in 32 bit ROP chains, there is a directory "extras" which
+contains slides and exercises for 32 Bit. 
 -----------------------------------------------------------------------------------
 
 Maybe check out the following ressources to refresh your memory or read up on missing information: 

@@ -1,23 +1,31 @@
 # ROP-Workshop
-Slides, exercises, cheatsheet and instructions for my ROP-Workshop (Blackhoodie18)
+Slides, exercises, cheatsheet and instructions for my ROP-Workshop 
+
 
 ROP stands for Return Oriented Programming, which is a binary exploitation technique
 that allows you to circumvent certain security mechanisms like a non executable stack.
 
+This repository can be seen as an online tutorial version of the workshop.
+With this material you should be able to complete all 3 exercises if this is something
+you wanted to achieve.
+
 You can find the slides of the workshop in the directory slides, and the exercises we 
-worked through in the folder exercises. If you want to follow along, it's a good idea 
-to set up this workshop VM:
+worked through in the folder exercises. 
+In the slides folder you can find a slidedeck including everything I've said and
+done during the workshop (including screenshots of the exercises) with detailed 
+description. 
+
+If you want to follow along, it's a good idea to set up this workshop VM:
 
 
 Set Up Your Workhop VM
 ======================
 
 - Download the Ubuntu16.04 ISO http://releases.ubuntu.com/16.04/ (Ubuntu16.04 is mandatory, 
-  Ubuntu 18.04 will not work, and other Distros I did not check)
+  Ubuntu 18.04 will have issues with stack alignment, which I do not cover until now)
+
 - Get started as usual, make sure you have internet connectivity (NAT or Bridged), Guest
   Extensions and Shared folders are optional but nice to have
-- make your first snapshot (at least if you installed guest extensions), because the 
-  following steps could need a reset
 
 - install pwntools:
   pwntools is a python-module we will use. 
@@ -62,10 +70,9 @@ Set Up Your Workhop VM
 	gdb-peda$ 
 ```
 
-
 - install the free Demo version of Hopper: https://www.hopperapp.com/download.html
 
-- clone this get repo inside your VM to get the exercises
+- clone this git repo inside your VM to get the exercises
 - Read through the Readme in the exercises folder
 
 - If you havent done it by now, get your favourite text editor (I provided sublime-text, gedit, vim)
