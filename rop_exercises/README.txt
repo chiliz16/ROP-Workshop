@@ -15,7 +15,7 @@ the python-template that already contains the rough structure of the exploit.
 
 There is a slidedeck that guides you through the workshop, with everything I've 
 said and done in the workshop, so you might want to walk this one through.
-(/slides/IntroToROP_with_notes.pdf). 
+(/slides/IntroToROP_detailed.pdf). 
 
 Every important command (e.g. how to give the exploit to the vulnerable binary)
 is included in the cheat sheet. Also tips on how to debug/avoid mistakes are 
