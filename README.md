@@ -20,16 +20,25 @@ If you want to follow along, it's a good idea to set up this workshop VM:
 
 Set Up Your Workhop VM
 ======================
+- You can use a Hypervisor of your choice, e.g. VirtualBox. 
 
 - Download the Ubuntu16.04 ISO http://releases.ubuntu.com/16.04/ (Ubuntu16.04 is mandatory, 
   Ubuntu 18.04 will have issues with stack alignment, which I do not cover until now)
+
+- VirtualBox: Machine => New (Type: Linux, Version: 64 Bit Ubuntu)
+        => Next => Memory size: 2048 MB (we won't need much)
+	
+- start the VM and it will ask for the .iso file, 
+  eventually you will get to the ubuntu installation wizard that
+  will guide you through the ubuntu installation. 
+  (default settings)
 
 - Get started as usual, make sure you have internet connectivity (NAT or Bridged), Guest
   Extensions and Shared folders are optional but nice to have
 
 - install pwntools:
   pwntools is a python-module we will use. 
-  It is installed via pip. Before doing that, taking a snapshot is very wise. 
+  It is installed via pip.
 ```
 	$ sudo apt-get update
 	$ sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential
@@ -48,16 +57,21 @@ Set Up Your Workhop VM
 ```
  	[1]: from pwn import * 
 ```
-  if no errors occure, both ipython and pwntools are installed correctly => snapshot!
+  if no errors occure, both ipython and pwntools are installed correctly
 
 
-- install ROPgadget (another pip install, so make sure you did a snapshot)
+- install ROPgadget 
 ```
 	$ sudo pip install capstone
 	$ sudo pip install ropgadget
 	$ ROPgadget --version
 ```
 
+
+- install ropper:
+```
+  $ sudo pip install ropper
+```
 
 - install gdb-peda:
 ```
