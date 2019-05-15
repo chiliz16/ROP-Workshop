@@ -15,15 +15,17 @@ In the slides folder you can find a slidedeck including everything I've said and
 done during the workshop (including screenshots of the exercises) with detailed 
 description. 
 
-If you want to follow along, it's a good idea to set up this workshop VM:
+If you want to follow along, you can download the Workshop VM with all the tools 
+and exercises https://rop.chiliz.tech/download-vm
+
+If you want to set it up yourself, follow these instructions:
 
 
 Set Up Your Workhop VM
 ======================
 - You can use a Hypervisor of your choice, e.g. VirtualBox. 
 
-- Download the Ubuntu16.04 ISO http://releases.ubuntu.com/16.04/ (Ubuntu16.04 is mandatory, 
-  Ubuntu 18.04 will have issues with stack alignment, which I do not cover until now)
+- Download the Ubuntu19.04 ISO http://releases.ubuntu.com/19.04/
 
 - VirtualBox: Machine => New (Type: Linux, Version: 64 Bit Ubuntu)
         => Next => Memory size: 2048 MB (we won't need much)
@@ -83,8 +85,8 @@ Set Up Your Workhop VM
 ```
 	gdb-peda$ 
 ```
-
-- install the free Demo version of Hopper: https://www.hopperapp.com/download.html
+- install ghidra ( https://ghidra-sre.org/ )
+  (or the free Demo version of Hopper: https://www.hopperapp.com/download.html) 
 
 - clone this git repo inside your VM to get the exercises
 - Read through the Readme in the exercises folder
