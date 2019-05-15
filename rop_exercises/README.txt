@@ -15,7 +15,8 @@ the python-template that already contains the rough structure of the exploit.
 
 There is a slidedeck that guides you through the workshop, with everything I've 
 said and done in the workshop, so you might want to walk this one through.
-(/slides/IntroToROP_detailed.pdf). 
+(/slides/IntroToROP_detailed.pdf - (commands and what I said stay the same,
+the addresses vary a bit now because I updated the course for nsec19)). 
 
 Every important command (e.g. how to give the exploit to the vulnerable binary)
 is included in the cheat sheet. Also tips on how to debug/avoid mistakes are 
@@ -33,8 +34,10 @@ structure:
 
 
 For the third exercise it is useful to inspect how dynamic functions are called 
-with Hopper. Load the third binary in Hopper and follow the references 
-to the GOT and the PLT by clicking on them. 
+with Hopper or ghidra. 
+Ghidra: Start a new (non-shared) project and import the third binary. You can find the 
+main function in the Symbol tree on the left side bar (Functions-> main).
+Follow the references to the GOT and PLT by clicking on library functions like puts or read. 
 
 If you are interested in 32 bit ROP chains, there is a directory "extras" which
 contains slides and exercises for 32 Bit. 
